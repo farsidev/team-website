@@ -1,11 +1,11 @@
 import React from 'react';
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/Layout";
+import Home from './Home/index';
 
-
-const Home = () => (
+const App = () => (
     <Layout>
-        <h1>hi mother </h1>
+        <Home/>
     </Layout>
 );
 
-export default Home
+export default App
