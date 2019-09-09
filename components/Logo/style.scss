@@ -1,16 +1,16 @@
 .teamLogoParent {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  .imageParent {
-    width: 40px;
-    height: 40px;
-  }
-  .teamName {
-    padding: 0 14px;
-    font-size: 1.3rem;
-  }
-  @media (max-width: 576px) {
-    justify-content: center;
-  }
+   padding: 10px;
+   display: flex;
+   align-items: center;
+   .imageParent {
+      width: 40px;
+      height: 40px;
+   }
+   .teamName {
+      padding: 0 14px;
+      font-size: 1.3rem;
+   }
+   @media (max-width: 576px) {
+      justify-content: center;
+   }
 }

@@ -1,92 +1,91 @@
 .developersWrapper {
-  .step {
-    margin: 10px 0 0 0;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+   .step {
+      margin: 10px 0 0 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-start;
 
-    .item {
-      width: calc(18% - 16px);
-      margin: 0 8px 8px 0;
-      text-align: center;
-      border-radius: 10px;
-      padding: 5px 0;
-      cursor: pointer;
-
-      &:hover {
-        .developerBox {
-          box-shadow: 0 0 0 0;
-        }
-      }
-
-      &::before {
-        position: absolute;
-        content: '';
-        right: 0;
-        left: 0;
-        bottom: 0;
-        top: 23px;
-        background: #fff;
-        border-radius: 5px;
-      }
-
-      .developerBox {
-        width: 50px;
-        margin: 0 auto;
-        background: #fff;
-        padding: 2px;
-        border-radius: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.2s ease-in;
-        box-shadow: 0 8px 14px 0 #aaa;
-
-        img {
-          border-radius: 50%;
-        }
-      }
-
-      .title {
-        color: #000;
-        font-size: 0.8rem;
-      }
-
-      .subTitle {
-        font-size: 0.7rem;
-        color: #444;
-      }
-    }
-
-  }
-  @media (max-width: 575.98px) {
-    .mainTitle {
-      text-align: center;
-      font-size: 1.2rem;
-    }
-    .step {
       .item {
-        width: calc(50% - 16px);
-        margin: 8px;
+         width: calc(18% - 16px);
+         margin: 0 8px 8px 0;
+         text-align: center;
+         border-radius: 10px;
+         padding: 5px 0;
+         cursor: pointer;
+
+         &:hover {
+            .developerBox {
+               box-shadow: 0 0 0 0;
+            }
+         }
+
+         &::before {
+            position: absolute;
+            content: '';
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 23px;
+            background: #fff;
+            border-radius: 5px;
+         }
+
+         .developerBox {
+            width: 50px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 2px;
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease-in;
+            box-shadow: 0 8px 14px 0 #aaa;
+
+            img {
+               border-radius: 50%;
+            }
+         }
+
+         .title {
+            color: #000;
+            font-size: 0.8rem;
+         }
+
+         .subTitle {
+            font-size: 0.7rem;
+            color: #444;
+         }
       }
-    }
-  }
-  @media (min-width: 576px) and (max-width: 991.98px) {
-    .step {
-      .item {
-        width: calc(50% - 16px);
-        margin: 8px;
+   }
+   @media (max-width: 575.98px) {
+      .mainTitle {
+         text-align: center;
+         font-size: 1.2rem;
       }
-    }
-  }
-  @media (min-width: 992px) and (max-width: 1199.98px) {
-    .step {
-      .item {
-        width: calc(25% - 16px);
-        margin: 0 8px;
+      .step {
+         .item {
+            width: calc(50% - 16px);
+            margin: 8px;
+         }
       }
-    }
-  }
+   }
+   @media (min-width: 576px) and (max-width: 991.98px) {
+      .step {
+         .item {
+            width: calc(50% - 16px);
+            margin: 8px;
+         }
+      }
+   }
+   @media (min-width: 992px) and (max-width: 1199.98px) {
+      .step {
+         .item {
+            width: calc(25% - 16px);
+            margin: 0 8px;
+         }
+      }
+   }
 }
