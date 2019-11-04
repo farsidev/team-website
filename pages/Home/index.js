@@ -11,7 +11,7 @@ import Detail from '../../components/Detail';
 
 const Home = () => {
    return (
-      <React.Fragment>
+      <>
          <Head>
             <title>Farsi Developers Team.</title>
          </Head>
@@ -34,7 +34,7 @@ const Home = () => {
                <Detail />
             </aside>
          </div>
-      </React.Fragment>
+      </>
    );
 };
 

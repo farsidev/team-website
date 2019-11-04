@@ -1,19 +1,41 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Link from 'next/link';
 import general from '../../asset/style/general.scss';
 import grid from '../../asset/style/grid.scss';
 import css from './style.scss';
 // import image
+import Modal from '../../components/Modal';
 import ProgressImage from '../../asset/image/progresslogo.svg';
 
 const Project = () => {
+   const [modal, setModal] = useState({Visibility: false, cmp: 0});
    let mock_project = [
-      {icon: 'e.', title: 'exhibition'},
-      {icon: 'm.', title: 'moneyz'},
-      {icon: 'b.', title: 'besparo'},
-      {icon: 'a.', title: 'ahali'},
-      {icon: 'c.', title: 'cryptoland'},
-      {icon: '8+', title: 'more'},
+      {
+         icon: 'e.',
+         title: 'exhibition',
+         content: 'exhibition > mitone component ham bashe',
+      },
+      {
+         icon: 'm.',
+         title: 'moneyz',
+         content: 'moneyz > mitone component ham bashe',
+      },
+      {
+         icon: 'b.',
+         title: 'besparo',
+         content: 'besparo > mitone component ham bashe',
+      },
+      {
+         icon: 'a.',
+         title: 'ahali',
+         content: <div>body Modal</div>,
+      },
+      {
+         icon: 'c.',
+         title: 'title > cryptoland',
+         content: 'mitone component ham bashe',
+      },
+      {icon: '8+', title: 'more', content: 'mitone component ham bashe'},
    ];
    let mock_progress = [
       {
@@ -24,6 +46,9 @@ const Project = () => {
             '                                        style',
       },
    ];
+   const handleModal = id => {
+      setModal({Visibility: true, cmp: id});
+   };
    return (
       <div className={`${grid.row} ${grid.flexWrap} ${css.wrapper}`}>
          <div className={css.leftSide}>
@@ -34,14 +59,12 @@ const Project = () => {
                {mock_project.map((eachItem, index) => {
                   return (
                      <li className={css.item} key={index}>
-                        <Link href="/">
-                           <a>
-                              <div className={css.projectBox}>
-                                 <h3 className={css.icon}>{eachItem.icon}</h3>
-                              </div>
-                              <h4 className={css.title}>{eachItem.title}</h4>
-                           </a>
-                        </Link>
+                        <a onClick={() => handleModal(index)}>
+                           <div className={css.projectBox}>
+                              <h3 className={css.icon}>{eachItem.icon}</h3>
+                           </div>
+                           <h4 className={css.title}>{eachItem.title}</h4>
+                        </a>
                      </li>
                   );
                })}
@@ -72,6 +95,9 @@ const Project = () => {
                );
             })}
          </div>
+         <Modal visible={modal.Visibility}>
+            {mock_project[modal.cmp].content}
+         </Modal>
       </div>
    );
 };
