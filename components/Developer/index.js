@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import general from '../../asset/style/general.scss';
 import css from './style.scss';
-
+import Modal from '../../components/Modal';
+import Bio from './bio';
 // import Image
 import Image_one from '../../asset/image/guys/sina.png';
 import Image_two from '../../asset/image/guys/ali.jpg';
@@ -9,11 +10,13 @@ import Image_three from '../../asset/image/guys/sdg.jpg';
 import Image_four from '../../asset/image/guys/farshid.jpg';
 
 const Developer = () => {
+   const [modal, setModal] = useState({Visibility: false, cmp: 0});
    let mock_developer = [
       {
          image: Image_two,
          title: 'ali sameni',
          subtitle: 'back-end developer',
+         content: <Bio />,
       },
       {
          image: Image_four,
@@ -31,7 +34,9 @@ const Developer = () => {
          subtitle: 'front-end developer',
       },
    ];
-
+   const handleModal = id => {
+      setModal({Visibility: true, cmp: id});
+   };
    return (
       <div className={css.developersWrapper}>
          <h4 className={css.mainTitle}>
@@ -40,7 +45,10 @@ const Developer = () => {
          <ul className={css.step}>
             {mock_developer.map((eachItem, index) => {
                return (
-                  <li className={css.item} key={index}>
+                  <li
+                     className={css.item}
+                     key={index}
+                     onClick={() => handleModal(index)}>
                      <div className={css.developerBox}>
                         <img src={eachItem.image} alt="" />
                      </div>
@@ -50,6 +58,9 @@ const Developer = () => {
                );
             })}
          </ul>
+         <Modal visible={modal.Visibility}>
+            {mock_developer[modal.cmp].content}
+         </Modal>
       </div>
    );
 };
