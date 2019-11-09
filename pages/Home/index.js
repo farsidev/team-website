@@ -15,25 +15,24 @@ const Home = () => {
          <Head>
             <title>Farsi Developers Team.</title>
          </Head>
-         <div
+         <main
             className={`${grid.row} ${grid.justifyContentBetween} ${grid.flexWrap}`}>
             <div className={`${css.leftSide}`}>
                <Header />
-               <main>
-                  <div className={css.inner}>
-                     <h1 className={css.titleHeader}>hi, we are developers</h1>
-                     <h4 className={css.subtitleHeader}>
-                        welcome to our website
-                     </h4>
-                     <Project />
-                     <Developer />
-                  </div>
-               </main>
+               <div className={css.inner}>
+                  <h1 className={css.titleHeader}>hi, we are developers</h1>
+                  <h4 className={css.subtitleHeader}>welcome to our website</h4>
+                  <Project />
+                  <Developer />
+               </div>
             </div>
             <aside className={`${css.rightSide}`}>
                <Detail />
+               <div className={css.contactIcon}>
+                  <i className={css.isAnimating} />
+               </div>
             </aside>
-         </div>
+         </main>
       </>
    );
 };

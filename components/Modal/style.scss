@@ -5,15 +5,62 @@
    right: 0;
    bottom: 0;
    left: 0;
-}
-.modal {
-   background-color: #fff;
-   color: #000;
-   position: absolute;
-   top: 25%;
-   right: 25%;
-   bottom: 25%;
-   left: 25%;
-   padding: 1em;
-   border-radius: 15px;
+   .modal {
+      background-color: #fff;
+      color: #000;
+      position: absolute;
+      top: 25%;
+      right: 25%;
+      bottom: 25%;
+      left: 25%;
+      padding: 1em;
+      border-radius: 15px;
+      .inner {
+         height: 100%;
+      }
+      .close {
+         width: 45px;
+         height: 45px;
+         background: #fc4a59;
+         position: absolute;
+         display: block;
+         z-index: 1;
+         right: -20px;
+         top: -20px;
+         cursor: pointer;
+         border-radius: 50%;
+         transition: all 0.2s ease-in-out;
+         &:after {
+            position: absolute;
+            content: '';
+            background: transparent url("../../asset/image/icon/exit.svg") no-repeat center / contain;
+            width: 23px;
+            height: 23px;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            top: 50%;
+            transform: translateY(-50%);
+         }
+         &:hover {
+            filter: grayscale(1);
+         }
+      }
+   }
+   @media (max-width: 575.98px) {
+      .modal {
+         top: 5%;
+         bottom: 5%;
+         right: 5%;
+         left: 5%;
+      }
+   }
+   @media (min-width: 576px) and (max-width: 991.98px) {
+      .modal {
+         top: 10%;
+         bottom: 10%;
+         right: 10%;
+         left: 10%;
+      }
+   }
 }

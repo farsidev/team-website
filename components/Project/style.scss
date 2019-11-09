@@ -26,7 +26,7 @@
         width: calc(27% - 20px);
         margin: 0 12px 12px 0;
         text-align: center;
-
+        cursor: pointer;
         &:nth-child(even) {
           a {
             .projectBox {

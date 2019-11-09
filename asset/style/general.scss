@@ -1,99 +1,146 @@
 @font-face {
-  font-family: 'Century Gothic';
-  src: url('../../static/font/CenturyGothic.eot');
-  src: url('../../static/font/CenturyGothic.eot?#iefix') format('embedded-opentype'),
-  url('../../static/font/CenturyGothic.woff2') format('woff2'),
-  url('../../static/font/CenturyGothic.woff') format('woff'),
-  url('../../static/font/CenturyGothic.ttf') format('truetype'),
-  url('../../static/font/CenturyGothic.svg#CenturyGothic') format('svg');
-  font-weight: normal;
-  font-style: normal;
+   font-family: 'Century Gothic';
+   src: url('../../static/font/CenturyGothic.eot');
+   src: url('../../static/font/CenturyGothic.eot?#iefix')
+         format('embedded-opentype'),
+      url('../../static/font/CenturyGothic.woff2') format('woff2'),
+      url('../../static/font/CenturyGothic.woff') format('woff'),
+      url('../../static/font/CenturyGothic.ttf') format('truetype'),
+      url('../../static/font/CenturyGothic.svg#CenturyGothic') format('svg');
+   font-weight: normal;
+   font-style: normal;
 }
 
 html {
-  box-sizing: border-box;
-  -ms-overflow-style: scrollbar;
+   box-sizing: border-box;
+   -ms-overflow-style: scrollbar;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  font-size: 1rem;
-  font-family: 'Century Gothic', "Segoe UI", sans-serif;
-  box-sizing: border-box;
-  position: relative;
+   margin: 0;
+   padding: 0;
+   font-size: 1rem;
+   font-family: 'Century Gothic', 'Segoe UI', sans-serif;
+   box-sizing: border-box;
+   position: relative;
 
-  &:after, &:before {
-    box-sizing: inherit;
-  }
+   &:after,
+   &:before {
+      box-sizing: inherit;
+   }
 
-  &::selection {
-    color: #000;
-    background: #fff
-  }
+   &::selection {
+      color: #000;
+      background: #fff;
+   }
 }
 
 body {
-  position: relative;
-  min-height: 100vh;
-  padding: 5px;
-  color: #fff;
-  background: #2B2D42; /* fallback for old browsers */
-  background: -webkit-linear-gradient(45deg, #2B2D42, #37114D); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(45deg, #2B2D42, #37114D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  overflow: hidden;
+   position: relative;
+   min-height: 100vh;
+   padding: 0 15px;
+   color: #fff;
+   background: #2b2d42; /* fallback for old browsers */
+   background: -webkit-linear-gradient(
+      45deg,
+      #2b2d42,
+      #37114d
+   ); /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(
+      45deg,
+      #2b2d42,
+      #37114d
+   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  text-transform: capitalize;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: normal;
+   text-transform: capitalize;
 }
 
 input::placeholder {
-  font-size: 0.85rem;
+   font-size: 0.85rem;
 }
 
 li {
-  list-style: none;
+   list-style: none;
 }
 
 a {
-  display: block;
-  color: #fff;
-  text-decoration: none
+   display: block;
+   color: #fff;
+   text-decoration: none;
 }
 
 img {
-  width: 100%;
-  height: auto;
+   width: 100%;
+   height: auto;
+}
+
+.height100 {
+   height: 100%;
 }
 
 .count {
-  color: #ffffff47;
+   color: #ffffff47;
 }
 
 .status {
-  background: #f5f5f5;
-  padding: 5px 11px;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  color: #aaa;
-  &.done {
-    background: #edfbf6;
-    color: #32d296;
-  }
-  &.doing {
-    background: #fff6ee;
-    color: #faa05a;
-  }
-  @media (max-width: 575.98px) {
-    margin: 15px auto 0 auto;
-  }
-  @media (min-width: 576px) and (max-width: 991.98px) {
-    margin: 15px auto 0 auto;
-  }
-  @media (min-width: 992px) and (max-width: 1199.98px) {
-    margin: 0 auto;
-  }
+   background: #f5f5f5;
+   padding: 5px 11px;
+   border-radius: 50px;
+   font-size: 0.85rem;
+   color: #aaa;
+   &.done {
+      background: #edfbf6;
+      color: #32d296;
+   }
+   &.doing {
+      background: #fff6ee;
+      color: #faa05a;
+   }
+   @media (max-width: 575.98px) {
+      margin: 15px auto 0 auto;
+   }
+   @media (min-width: 576px) and (max-width: 991.98px) {
+      margin: 15px auto 0 auto;
+   }
+   @media (min-width: 992px) and (max-width: 1199.98px) {
+      margin: 0 auto;
+   }
 }
 
+.socialMedia {
+   padding: 5px;
+   border-radius: 10px;
+   border: solid 1px #ededed;
+
+   .socialTitle {
+      color: #999;
+      padding-bottom: 5px;
+      border-bottom: solid 1px #ededed;
+      font-size: 0.8rem;
+   }
+   ul {
+      padding-top: 10px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      li {
+         margin: 0 5px;
+         a {
+            display: inline-block;
+            img {
+               width: 25px;
+               height: 25px;
+            }
+         }
+      }
+   }
+}

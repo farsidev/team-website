@@ -171,9 +171,6 @@ const Detail = () => {
                </ul>
             );
          })}
-         <div className={css.contactIcon}>
-            <i className={css.isAnimating} />
-         </div>
       </div>
    );
 };

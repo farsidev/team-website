@@ -19,9 +19,10 @@ const Modal = ({children, visible = false}) => {
    return (
       visibility && (
          <Portal selector="#modal">
-            <div className={css.backdrop}>
+            <div className={css.backdrop}  onClick={() => handleClose()}>
                <div className={css.modal}>
-                  <div className="inner">{children}</div>
+                  <span className={css.close} onClick={() => handleClose()} />
+                  <div className={css.inner}>{children}</div>
                </div>
             </div>
          </Portal>
