@@ -9,6 +9,9 @@ import Project from '../../components/Project';
 import Developer from '../../components/Developer';
 import Detail from '../../components/Detail';
 
+// logic
+import DetailProjectProvider from '../../provider/detailProject';
+
 const Home = () => {
    return (
       <>
@@ -17,21 +20,25 @@ const Home = () => {
          </Head>
          <main
             className={`${grid.row} ${grid.justifyContentBetween} ${grid.flexWrap}`}>
-            <div className={`${css.leftSide}`}>
-               <Header />
-               <div className={css.inner}>
-                  <h1 className={css.titleHeader}>hi, we are developers</h1>
-                  <h4 className={css.subtitleHeader}>welcome to our website</h4>
-                  <Project />
-                  <Developer />
+            <DetailProjectProvider>
+               <div className={`${css.leftSide}`}>
+                  <Header />
+                  <div className={css.inner}>
+                     <h1 className={css.titleHeader}>hi, we are developers</h1>
+                     <h4 className={css.subtitleHeader}>
+                        welcome to our website
+                     </h4>
+                     <Project />
+                     <Developer />
+                  </div>
                </div>
-            </div>
-            <aside className={`${css.rightSide}`}>
-               <Detail />
-               <div className={css.contactIcon}>
-                  <i className={css.isAnimating} />
-               </div>
-            </aside>
+               <aside className={`${css.rightSide}`}>
+                  <Detail />
+                  <div className={css.contactIcon}>
+                     <i className={css.isAnimating} />
+                  </div>
+               </aside>
+            </DetailProjectProvider>
          </main>
       </>
    );
