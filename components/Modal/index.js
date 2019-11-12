@@ -1,33 +1,41 @@
 import React, {useState, useEffect} from 'react';
-import ReactDOM from 'react-dom';
 import Portal from '../../lib/Portal';
 import css from './style.scss';
+import PropTypes from 'prop-types';
 
-const Modal = ({children, visible = false}) => {
+const Modal = ({children, visible, hideModal}) => {
    const [visibility, setVisibility] = useState(false);
 
    useEffect(() => {
       setVisibility(visible);
    }, [visible]);
-   const handleOpen = () => {
-      setVisibility(true);
-   };
+
    const handleClose = () => {
-      setVisibility(false);
+      hideModal();
    };
-   console.log(children);
    return (
       visibility && (
          <Portal selector="#modal">
-            <div className={css.backdrop}  onClick={() => handleClose()}>
+            <div className={css.backdrop} onClick={() => handleClose()}>
                <div className={css.modal}>
-                  <span className={css.close} onClick={() => handleClose()} />
+                  <span className={css.close} onClick={hideModal} />
                   <div className={css.inner}>{children}</div>
                </div>
             </div>
          </Portal>
       )
    );
+};
+Modal.propTypes = {
+   // property
+   visible: PropTypes.bool,
+   children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
+      .isRequired,
+   // method
+   hideModal: PropTypes.func,
+};
+Modal.defaultProps = {
+   visible: false,
 };
 
 export default Modal;

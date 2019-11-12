@@ -22,20 +22,26 @@ const Developer = () => {
          image: Image_four,
          title: 'fr keymanesh',
          subtitle: 'UI / UX designer',
+         content: <Bio />,
       },
       {
          image: Image_three,
          title: 'mreza sadeghi',
          subtitle: 'front-end developer',
+         content: <Bio />,
       },
       {
          image: Image_one,
          title: 'sina zeini',
          subtitle: 'front-end developer',
+         content: <Bio />,
       },
    ];
    const handleModal = id => {
       setModal({Visibility: true, cmp: id});
+   };
+   const handleClose = () => {
+      setModal({Visibility: false, cmp: 0});
    };
    return (
       <div className={css.developersWrapper}>
@@ -58,7 +64,7 @@ const Developer = () => {
                );
             })}
          </ul>
-         <Modal visible={modal.Visibility}>
+         <Modal visible={modal.Visibility} hideModal={handleClose}>
             {mock_developer[modal.cmp].content}
          </Modal>
       </div>
