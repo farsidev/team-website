@@ -35,21 +35,21 @@
           }
         }
 
-        &:last-child {
-          a {
-            &:before {
-              display: none;
-            }
+        // &:last-child {
+        //   a {
+        //     &:before {
+        //       display: none;
+        //     }
 
-            .projectBox {
-              background: #ffffff1f;
-            }
+        //     .projectBox {
+        //       background: #ffffff1f;
+        //     }
 
-            .title {
-              color: transparent;
-            }
-          }
-        }
+        //     .title {
+        //       color: transparent;
+        //     }
+        //   }
+        // }
 
         a {
           transition: all 0.2s ease-in;
