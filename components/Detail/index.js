@@ -41,9 +41,9 @@ const Detail = () => {
                         </div>
                         <h4
                            className={`${general.status} ${
-                              !detail.is_active ? general.doing : general.done
+                              detail.is_active ? general.doing : general.done
                            }`}>
-                           {!detail.is_active ? 'in progress' : 'done'}
+                           {detail.is_active ? 'in progress' : 'done'}
                         </h4>
                      </div>
                      <p className={css.description}>{detail.description}</p>

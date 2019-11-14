@@ -9,6 +9,7 @@ import css from './style.scss';
 // import image
 import ProgressImage from '../../asset/image/progresslogo.svg';
 import logoImage from '../../asset/image/shark.svg';
+import ExhibitionLogo from '../../asset/image/exhibition.png';
 
 import Image_one from '../../asset/image/guys/sina.png';
 import Image_two from '../../asset/image/guys/ali.jpg';
@@ -26,7 +27,7 @@ const Project = () => {
          title: 'exhibition',
          detail: {
             // logo: path.join(rootDir, 'asset', 'image', 'shark.svg'),
-            logo: logoImage,
+            logo: ExhibitionLogo,
             title: 'iran international exhibition',
             is_active: 0,
             description:
@@ -43,7 +44,7 @@ const Project = () => {
             // logo: path.join(rootDir, 'asset', 'image', 'shark.svg'),
             logo: logoImage,
             title: 'moneyz',
-            is_active: 1,
+            is_active: 0,
             description:
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
             url_text: 'expotik.com',
@@ -58,7 +59,7 @@ const Project = () => {
             // logo: path.join(rootDir, 'asset', 'image', 'shark.svg'),
             logo: logoImage,
             title: 'besparo',
-            is_active: 0,
+            is_active: 1,
             description:
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
             url_text: 'expotik.com',
@@ -124,7 +125,7 @@ const Project = () => {
       <div className={`${grid.row} ${grid.flexWrap} ${css.wrapper}`}>
          <div className={css.leftSide}>
             <h4 className={css.mainTitle}>
-               projects <span className={general.count}>(13)</span>
+               projects <span className={general.count}>(5)</span>
             </h4>
             <ul className={css.step}>
                {mock_project.map((eachItem, index) => {
@@ -139,14 +140,14 @@ const Project = () => {
                      </li>
                   );
                })}
-               <li className={css.item}>
+               {/* <li className={css.item}>
                   <a>
                      <div className={css.projectBox}>
                         <h3 className={css.icon}>8+</h3>
                      </div>
                      <h4 className={css.title}>more</h4>
                   </a>
-               </li>
+               </li> */}
             </ul>
          </div>
          <div className={css.rightSide}>

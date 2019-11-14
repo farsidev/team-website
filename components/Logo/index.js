@@ -10,7 +10,7 @@ const Logo = () => {
          <div className={css.imageParent}>
             <img src={logoImage} alt="Developers" title="Developers" />
          </div>
-         <h2 className={css.teamName}>farsi developers.</h2>
+         <h2 className={css.teamName}>my amor.</h2>
       </div>
    );
 };
