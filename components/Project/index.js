@@ -10,6 +10,11 @@ import css from './style.scss';
 import ProgressImage from '../../asset/image/progresslogo.svg';
 import logoImage from '../../asset/image/shark.svg';
 
+import Image_one from '../../asset/image/guys/sina.png';
+import Image_two from '../../asset/image/guys/ali.jpg';
+import Image_three from '../../asset/image/guys/sdg.jpg';
+import Image_four from '../../asset/image/guys/farshid.jpg';
+
 //
 import {useDetailProjectDispatch} from '../../hooks/useDetailProjectDipatch';
 
@@ -28,6 +33,7 @@ const Project = () => {
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
             url_text: 'expotik.com',
             url_address: 'https://www.apple.com',
+            cover: Image_one,
          },
       },
       {
@@ -42,6 +48,7 @@ const Project = () => {
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
             url_text: 'expotik.com',
             url_address: 'https://www.apple.com',
+            cover: Image_two,
          },
       },
       {
@@ -56,6 +63,7 @@ const Project = () => {
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
             url_text: 'expotik.com',
             url_address: 'https://www.apple.com',
+            cover: Image_three,
          },
       },
       {
@@ -70,6 +78,7 @@ const Project = () => {
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
             url_text: 'expotik.com',
             url_address: 'https://www.apple.com',
+            cover: Image_four,
          },
       },
       {
@@ -84,6 +93,7 @@ const Project = () => {
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
             url_text: 'expotik.com',
             url_address: 'https://www.apple.com',
+            cover: Image_one,
          },
       },
    ];

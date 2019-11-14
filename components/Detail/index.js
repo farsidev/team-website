@@ -61,7 +61,10 @@ const Detail = () => {
                   </div>
                </li>
                <li className={css.item}>
-                  <div className={css.projectImage} />
+                  <div
+                     className={css.projectImage}
+                     style={{backgroundImage: `url(${detail.cover})`}}
+                  />
                </li>
                <li className={css.item}>
                   <div className={css.features}>
