@@ -9,7 +9,6 @@ import css from './style.scss';
 // import image
 import ProgressImage from '../../asset/image/progresslogo.svg';
 import logoImage from '../../asset/image/shark.svg';
-import ExhibitionLogo from '../../asset/image/exhibition.png';
 
 import Image_one from '../../asset/image/guys/sina.png';
 import Image_two from '../../asset/image/guys/ali.jpg';
@@ -21,20 +20,62 @@ import {useDetailProjectDispatch} from '../../hooks/useDetailProjectDipatch';
 
 const Project = () => {
    const dispatchDetail = useDetailProjectDispatch();
+   const [activeClass, setActiveClass] = React.useState(0);
    let mock_project = [
       {
          icon: 'e.',
          title: 'exhibition',
          detail: {
-            // logo: path.join(rootDir, 'asset', 'image', 'shark.svg'),
-            logo: ExhibitionLogo,
+            logo: '/static/exhibition.png',
             title: 'iran international exhibition',
             is_active: 0,
             description:
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
             url_text: 'expotik.com',
             url_address: 'https://www.apple.com',
-            cover: Image_one,
+            cover: '/static/image/guys/sina.png',
+            devices: [
+               {
+                  img: '/static/image/icon/android.svg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/icon/laptop.svg',
+                  title: 'android application',
+               },
+            ],
+            technologies: [
+               {
+                  img: '/static/image/icon/react.svg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/icon/nodejs.svg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/icon/antd.svg',
+                  title: 'android application',
+               },
+            ],
+            developers: [
+               {
+                  img: '/static/image/guys/sdg.jpg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/guys/sina.png',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/guys/ali.jpg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/guys/farshid.jpg',
+                  title: 'android application',
+               },
+            ],
          },
       },
       {
@@ -50,6 +91,48 @@ const Project = () => {
             url_text: 'expotik.com',
             url_address: 'https://www.apple.com',
             cover: Image_two,
+            devices: [
+               {
+                  img: '/static/image/icon/android.svg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/icon/laptop.svg',
+                  title: 'android application',
+               },
+            ],
+            technologies: [
+               {
+                  img: '/static/image/icon/react.svg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/icon/nodejs.svg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/icon/antd.svg',
+                  title: 'android application',
+               },
+            ],
+            developers: [
+               {
+                  img: '/static/image/guys/sdg.jpg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/guys/sina.png',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/guys/ali.jpg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/guys/farshid.jpg',
+                  title: 'android application',
+               },
+            ],
          },
       },
       {
@@ -65,6 +148,48 @@ const Project = () => {
             url_text: 'expotik.com',
             url_address: 'https://www.apple.com',
             cover: Image_three,
+            devices: [
+               {
+                  img: '/static/image/icon/android.svg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/icon/laptop.svg',
+                  title: 'android application',
+               },
+            ],
+            technologies: [
+               {
+                  img: '/static/image/icon/react.svg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/icon/nodejs.svg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/icon/antd.svg',
+                  title: 'android application',
+               },
+            ],
+            developers: [
+               {
+                  img: '/static/image/guys/sdg.jpg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/guys/sina.png',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/guys/ali.jpg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/guys/farshid.jpg',
+                  title: 'android application',
+               },
+            ],
          },
       },
       {
@@ -80,6 +205,26 @@ const Project = () => {
             url_text: 'expotik.com',
             url_address: 'https://www.apple.com',
             cover: Image_four,
+            devices: [],
+            technologies: [],
+            developers: [
+               {
+                  img: '/static/image/guys/sdg.jpg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/guys/sina.png',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/guys/ali.jpg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/guys/farshid.jpg',
+                  title: 'android application',
+               },
+            ],
          },
       },
       {
@@ -95,6 +240,32 @@ const Project = () => {
             url_text: 'expotik.com',
             url_address: 'https://www.apple.com',
             cover: Image_one,
+            devices: [
+               {
+                  img: '/static/image/icon/laptop.svg',
+                  title: 'android application',
+               },
+            ],
+            technologies: [
+               {
+                  img: '/static/image/icon/react.svg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/icon/webpack.svg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/icon/antd.svg',
+                  title: 'android application',
+               },
+            ],
+            developers: [
+               {
+                  img: '/static/image/guys/sdg.jpg',
+                  title: 'android application',
+               },
+            ],
          },
       },
    ];
@@ -114,12 +285,55 @@ const Project = () => {
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
             url_text: 'expotik.com',
             url_address: 'https://www.apple.com',
+            devices: [
+               {
+                  img: '/static/image/icon/android.svg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/icon/laptop.svg',
+                  title: 'android application',
+               },
+            ],
+            technologies: [
+               {
+                  img: '/static/image/icon/react.svg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/icon/node.svg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/icon/antd.svg',
+                  title: 'android application',
+               },
+            ],
+            developers: [
+               {
+                  img: '/static/image/guys/sdg.jpg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/guys/sina.jpg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/guys/ali.jpg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/guys/farshid.jpg',
+                  title: 'android application',
+               },
+            ],
          },
       },
    ];
-   const handleClick = detail => {
+   const handleClick = (detail, i) => {
       // console.log(detail);
       dispatchDetail(detail);
+      setActiveClass(i);
    };
    return (
       <div className={`${grid.row} ${grid.flexWrap} ${css.wrapper}`}>
@@ -131,7 +345,9 @@ const Project = () => {
                {mock_project.map((eachItem, index) => {
                   return (
                      <li className={css.item} key={index}>
-                        <a onClick={() => handleClick(eachItem.detail)}>
+                        <a
+                           onClick={() => handleClick(eachItem.detail, index)}
+                           className={activeClass === index ? css.active : ''}>
                            <div className={css.projectBox}>
                               <h3 className={css.icon}>{eachItem.icon}</h3>
                            </div>

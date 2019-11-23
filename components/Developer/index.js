@@ -16,25 +16,25 @@ const Developer = () => {
          image: Image_two,
          title: 'ali sameni',
          subtitle: 'back-end developer',
-         content: <Bio />,
+         content: <Bio id={0} />,
       },
       {
          image: Image_four,
          title: 'fr keymanesh',
          subtitle: 'UI / UX designer',
-         content: <Bio />,
+         content: <Bio id={1} />,
       },
       {
          image: Image_three,
          title: 'mreza sadeghi',
          subtitle: 'front-end developer',
-         content: <Bio />,
+         content: <Bio id={2} />,
       },
       {
          image: Image_one,
          title: 'sina zeini',
          subtitle: 'front-end developer',
-         content: <Bio />,
+         content: <Bio id={3} />,
       },
    ];
    const handleModal = id => {

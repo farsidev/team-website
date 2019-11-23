@@ -1,81 +1,123 @@
 import React from 'react';
-import Link from 'next/link';
 import general from '../../asset/style/general.scss';
 import grid from '../../asset/style/grid.scss';
 import css from './style.scss';
-import image_one from '../../asset/image/guys/ali.jpg';
-import Instagram from '../../asset/image/icon/instagram.svg';
-import Linkedin from '../../asset/image/icon/linkedin.svg';
-import Twitter from '../../asset/image/icon/twitter.svg';
-import Github from '../../asset/image/icon/github.svg';
+import PropTypes from 'prop-types';
 
-const Bio = () => {
+const Bio = ({id}) => {
    let mock_bio = [
       {
-         image: image_one,
+         id: 0,
+         image: '/static/image/guys/ali.jpg',
          name: 'ali sameni',
          job: 'back-end developer',
          description:
             'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
+         social: [
+            {
+               img: '/static/image/icon/instagram.svg',
+               link: 'https://www.instagram.com/mohamaad_sdg/',
+            },
+            {
+               img: '/static/image/icon/twitter.svg',
+               link: 'https://www.instagram.com/sina_zeini/',
+            },
+         ],
+      },
+      {
+         id: 1,
+         image: '/static/image/guys/farshid.jpg',
+         name: 'fr keymanesh',
+         job: 'back-end developer',
+         description:
+            'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
+         social: [
+            {
+               img: '/static/image/icon/instagram.svg',
+               link: 'https://www.instagram.com/mohamaad_sdg/',
+            },
+            {
+               img: '/static/image/icon/twitter.svg',
+               link: 'https://www.instagram.com/sina_zeini/',
+            },
+         ],
+      },
+      {
+         id: 2,
+         image: '/static/image/guys/sdg.jpg',
+         name: 'mreza sadeghi',
+         job: 'back-end developer',
+         description:
+            'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
+         social: [
+            {
+               img: '/static/image/icon/instagram.svg',
+               link: 'https://www.instagram.com/mohamaad_sdg/',
+            },
+            {
+               img: '/static/image/icon/twitter.svg',
+               link: 'https://www.instagram.com/sina_zeini/',
+            },
+         ],
+      },
+      {
+         id: 3,
+         image: '/static/image/guys/sina.png',
+         name: 'sina zeini',
+         job: 'back-end developer',
+         description:
+            'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
+         social: [
+            {
+               img: '/static/image/icon/instagram.svg',
+               link: 'https://www.instagram.com/mohamaad_sdg/',
+            },
+            {
+               img: '/static/image/icon/twitter.svg',
+               link: 'https://www.instagram.com/sina_zeini/',
+            },
+         ],
       },
    ];
-   return (
-      <div className={css.bioWrapper}>
-         {mock_bio.map((eachItem, index) => {
-            return (
-               <div className={`${grid.row} ${general.height100}`} key={index}>
-                  <div className={css.poster}>
-                     <img src={eachItem.image} alt="" />
-                  </div>
-                  <div className={css.rightSide}>
-                     <div className={css.top}>
-                        <h3>{eachItem.name}</h3>
-                        <h4>{eachItem.job}</h4>
-                     </div>
-                     <div className={css.bottom}>
-                        <p>{eachItem.description}</p>
-                        <div className={general.socialMedia}>
-                           <h6 className={general.socialTitle}>
-                              social media :
-                           </h6>
-                           <ul>
-                              <li>
-                                 <Link href="#">
-                                    <a>
-                                       <img src={Instagram} />
-                                    </a>
-                                 </Link>
-                              </li>
-                              <li>
-                                 <Link href="#">
-                                    <a>
-                                       <img src={Linkedin} />
-                                    </a>
-                                 </Link>
-                              </li>
-                              <li>
-                                 <Link href="#">
-                                    <a>
-                                       <img src={Twitter} />
-                                    </a>
-                                 </Link>
-                              </li>
-                              <li>
-                                 <Link href="#">
-                                    <a>
-                                       <img src={Github} />
-                                    </a>
-                                 </Link>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
+   const view = () => {
+      const selectedBio = {};
+      for (const x of mock_bio) {
+         x.id === id && Object.assign(selectedBio, x);
+      }
+      return (
+         <div className={`${grid.row} ${general.height100}`}>
+            <div className={css.poster}>
+               <img src={selectedBio.image} alt="" />
+            </div>
+            <div className={css.rightSide}>
+               <div className={css.top}>
+                  <h3>{selectedBio.name}</h3>
+                  <h4>{selectedBio.job}</h4>
                </div>
-            );
-         })}
-      </div>
-   );
+               <div className={css.bottom}>
+                  <p>{selectedBio.description}</p>
+                  {selectedBio.social.length !== 0 && (
+                     <div className={general.socialMedia}>
+                        <h6 className={general.socialTitle}>social media :</h6>
+                        <ul>
+                           {selectedBio.social.map((x, i) => (
+                              <li key={i}>
+                                 <a href={x.link} target="_balnk">
+                                    <img src={x.img} />
+                                 </a>
+                              </li>
+                           ))}
+                        </ul>
+                     </div>
+                  )}
+               </div>
+            </div>
+         </div>
+      );
+   };
+   return <div className={css.bioWrapper}>{view()}</div>;
 };
-
+Bio.propTypes = {
+   id: PropTypes.number.isRequired,
+};
 export default Bio;

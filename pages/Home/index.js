@@ -2,17 +2,27 @@ import React from 'react';
 import Head from 'next/head';
 import grid from '../../asset/style/grid.scss';
 import css from './style.scss';
+import Modal from '../../components/Modal';
 
 // import component
 import Header from '../../components/Header';
 import Project from '../../components/Project';
 import Developer from '../../components/Developer';
 import Detail from '../../components/Detail';
+import Contact from '../../components/Contact';
 
 // logic
 import DetailProjectProvider from '../../provider/detailProject';
 
 const Home = () => {
+   const [visibilityModal, setVisibilityModal] = React.useState(false);
+
+   const handleModal = () => {
+      setVisibilityModal(true);
+   };
+   const handleClose = () => {
+      setVisibilityModal(false);
+   };
    return (
       <>
          <Head>
@@ -34,11 +44,14 @@ const Home = () => {
                </div>
                <aside className={`${css.rightSide}`}>
                   <Detail />
-                  <div className={css.contactIcon}>
+                  <div className={css.contactIcon} onClick={handleModal}>
                      <i className={css.isAnimating} />
                   </div>
                </aside>
             </DetailProjectProvider>
+            <Modal visible={visibilityModal} hideModal={handleClose}>
+               <Contact />
+            </Modal>
          </main>
       </>
    );

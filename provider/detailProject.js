@@ -4,17 +4,30 @@ import PropTypes from 'prop-types';
 export const DetatilProjectContext = React.createContext();
 export const DetailProjectDispatcherContext = React.createContext();
 
-import logoImage from '../asset/image/shark.svg';
-
 const initProject = {
-   // logo: path.join(rootDir, 'asset', 'image', 'shark.svg'),
-   logo: logoImage,
+   logo: '/static/exhibition.png',
    title: 'iran international exhibition',
    is_active: 0,
    description:
-      'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
+      'It sets up your, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
    url_text: 'expotik.com',
    url_address: 'https://www.apple.com',
+   cover: '/static/image/guys/sina.png',
+   devices: [
+      {img: '/static/image/icon/android.svg', title: 'android application'},
+      {img: '/static/image/icon/laptop.svg', title: 'android application'},
+   ],
+   technologies: [
+      {img: '/static/image/icon/react.svg', title: 'android application'},
+      {img: '/static/image/icon/nodejs.svg', title: 'android application'},
+      {img: '/static/image/icon/antd.svg', title: 'android application'},
+   ],
+   developers: [
+      {img: '/static/image/guys/sdg.jpg', title: 'android application'},
+      {img: '/static/image/guys/sina.png', title: 'android application'},
+      {img: '/static/image/guys/ali.jpg', title: 'android application'},
+      {img: '/static/image/guys/farshid.jpg', title: 'android application'},
+   ],
 };
 const DetailProjectProvider = ({children}) => {
    const [detailProject, setDetailProject] = React.useState(initProject);
