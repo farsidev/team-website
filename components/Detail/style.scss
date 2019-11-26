@@ -66,16 +66,18 @@
             position: relative;
             height: 300px;
             margin: 15px 0;
-
+            border-radius: 25px;
+            background: transparent no-repeat center / cover;
             &:after {
-               // position: absolute;
+               position: absolute;
                content: '';
                top: 0;
                right: 0;
                left: 0;
                bottom: 0;
-               background: #f5f5f5;
-               border-radius: 10px;
+               background: #000;
+               opacity: 0.1;
+               border-radius: 25px;
             }
          }
 

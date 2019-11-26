@@ -1,19 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
 import general from '../../asset/style/general.scss';
 import grid from '../../asset/style/grid.scss';
 import css from './style.scss';
 
 // const rootDir = require('../../util/path');
-
-// import image
-import ProgressImage from '../../asset/image/progresslogo.svg';
-import logoImage from '../../asset/image/shark.svg';
-
-import Image_one from '../../asset/image/guys/sina.png';
-import Image_two from '../../asset/image/guys/ali.jpg';
-import Image_three from '../../asset/image/guys/sdg.jpg';
-import Image_four from '../../asset/image/guys/farshid.jpg';
 
 //
 import {useDetailProjectDispatch} from '../../hooks/useDetailProjectDipatch';
@@ -33,7 +23,7 @@ const Project = () => {
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
             url_text: 'expotik.com',
             url_address: 'https://www.apple.com',
-            cover: '/static/image/guys/sina.png',
+            cover: '/static/image/wallpaper/wallpaper_one.jpg',
             devices: [
                {
                   img: '/static/image/icon/android.svg',
@@ -82,15 +72,14 @@ const Project = () => {
          icon: 'm.',
          title: 'moneyz',
          detail: {
-            // logo: path.join(rootDir, 'asset', 'image', 'shark.svg'),
-            logo: logoImage,
+            logo: '/static/moneyz.svg',
             title: 'moneyz',
             is_active: 0,
             description:
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
-            url_text: 'expotik.com',
+            url_text: 'moneyz.com',
             url_address: 'https://www.apple.com',
-            cover: Image_two,
+            cover: '/static/image/wallpaper/wallpaper_two.jpg',
             devices: [
                {
                   img: '/static/image/icon/android.svg',
@@ -105,15 +94,7 @@ const Project = () => {
                {
                   img: '/static/image/icon/react.svg',
                   title: 'android application',
-               },
-               {
-                  img: '/static/image/icon/nodejs.svg',
-                  title: 'android application',
-               },
-               {
-                  img: '/static/image/icon/antd.svg',
-                  title: 'android application',
-               },
+               }
             ],
             developers: [
                {
@@ -139,18 +120,21 @@ const Project = () => {
          icon: 'b.',
          title: 'besparo',
          detail: {
-            // logo: path.join(rootDir, 'asset', 'image', 'shark.svg'),
-            logo: logoImage,
+            logo: '/static/besparo.png',
             title: 'besparo',
             is_active: 1,
             description:
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
-            url_text: 'expotik.com',
+            url_text: 'besparo.com',
             url_address: 'https://www.apple.com',
-            cover: Image_three,
+            cover: '/static/image/wallpaper/wallpaper_three.jpg',
             devices: [
                {
                   img: '/static/image/icon/android.svg',
+                  title: 'android application',
+               },
+               {
+                  img: '/static/image/icon/apple.svg',
                   title: 'android application',
                },
                {
@@ -196,15 +180,14 @@ const Project = () => {
          icon: 'a.',
          title: 'ahali',
          detail: {
-            // logo: path.join(rootDir, 'asset', 'image', 'shark.svg'),
-            logo: logoImage,
+            logo: '/static/shark.svg',
             title: 'ahali',
             is_active: 1,
             description:
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
-            url_text: 'expotik.com',
+            url_text: 'ahali.com',
             url_address: 'https://www.apple.com',
-            cover: Image_four,
+            cover: '/static/image/wallpaper/wallpaper_four.jpg',
             devices: [],
             technologies: [],
             developers: [
@@ -231,15 +214,14 @@ const Project = () => {
          icon: 'c.',
          title: 'cryptoland',
          detail: {
-            // logo: path.join(rootDir, 'asset', 'image', 'shark.svg'),
-            logo: logoImage,
+            logo: '/static/cryptoland.png',
             title: 'cryptoland',
             is_active: 0,
             description:
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
-            url_text: 'expotik.com',
-            url_address: 'https://www.apple.com',
-            cover: Image_one,
+            url_text: 'cryptoland.net',
+            url_address: 'https://cryptoland.net/',
+            cover: '/static/image/wallpaper/wallpaper_five.png',
             devices: [
                {
                   img: '/static/image/icon/laptop.svg',
@@ -271,16 +253,15 @@ const Project = () => {
    ];
    let mock_progress = [
       {
-         logo: ProgressImage,
+         logo: '/static/image/progresslogo.svg',
          title: 'social network',
          description:
             'To use more sophisticated CSS-in-JS solutions, you typically have to implement\n' +
             '                                        style',
          detail: {
-            // logo: path.join(rootDir, 'asset', 'image', 'shark.svg'),
-            logo: logoImage,
+            logo: '/static/shark.svg',
             title: 'social network',
-            is_active: 0,
+            is_active: 1,
             description:
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
             url_text: 'expotik.com',
@@ -301,7 +282,7 @@ const Project = () => {
                   title: 'android application',
                },
                {
-                  img: '/static/image/icon/node.svg',
+                  img: '/static/image/icon/nodejs.svg',
                   title: 'android application',
                },
                {
@@ -315,7 +296,7 @@ const Project = () => {
                   title: 'android application',
                },
                {
-                  img: '/static/image/guys/sina.jpg',
+                  img: '/static/image/guys/sina.png',
                   title: 'android application',
                },
                {

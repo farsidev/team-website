@@ -7,7 +7,7 @@
       justify-content: flex-start;
 
       .item {
-         width: calc(18% - 16px);
+         width: calc(20% - 16px);
          margin: 0 8px 8px 0;
          text-align: center;
          border-radius: 10px;
@@ -93,7 +93,7 @@
    height: 100%;
    .poster {
       background: #f5f5f5;
-      width: 35%;
+      width: 40%;
       height: 100%;
 
       img {
@@ -104,7 +104,7 @@
    }
    .rightSide {
       padding-left: 20px;
-      width: 65%;
+      width: 60%;
 
       .top {
          padding-bottom: 15px;

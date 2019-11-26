@@ -3,39 +3,34 @@ import general from '../../asset/style/general.scss';
 import css from './style.scss';
 import Modal from '../../components/Modal';
 import Bio from './bio';
-// import Image
-import Image_one from '../../asset/image/guys/sina.png';
-import Image_two from '../../asset/image/guys/ali.jpg';
-import Image_three from '../../asset/image/guys/sdg.jpg';
-import Image_four from '../../asset/image/guys/farshid.jpg';
 
 const Developer = () => {
    const [modal, setModal] = useState({Visibility: false, cmp: 0});
    let mock_developer = [
       {
-         image: Image_two,
+         image: '/static/image/guys/ali.jpg',
          title: 'ali sameni',
          subtitle: 'back-end developer',
          content: <Bio id={0} />,
       },
       {
-         image: Image_four,
+         image: '/static/image/guys/farshid.jpg',
          title: 'fr keymanesh',
          subtitle: 'UI / UX designer',
          content: <Bio id={1} />,
       },
       {
-         image: Image_three,
+         image: '/static/image/guys/sdg.jpg',
          title: 'mreza sadeghi',
          subtitle: 'front-end developer',
          content: <Bio id={2} />,
       },
       {
-         image: Image_one,
+         image: '/static/image/guys/sina.png',
          title: 'sina zeini',
          subtitle: 'front-end developer',
          content: <Bio id={3} />,
-      },
+      }
    ];
    const handleModal = id => {
       setModal({Visibility: true, cmp: id});
