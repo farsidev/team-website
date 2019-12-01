@@ -1,0 +1,29 @@
+.contactForm {
+   .blackTitle {
+      background: #37114d;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      h3 {
+         color: #fff;
+      }
+   }
+   form {
+      margin: 6px 0;
+      ul {
+         display: flex;
+         align-items: center;
+         flex-wrap: wrap;
+         li {
+            width: calc(50% - 12px);
+            margin: 6px;
+            &.messageBox {
+               width: calc(70% - 12px);
+            }
+            &.uploadForm {
+                width: calc(30% - 12px);
+            }
+         }
+      }
+   }
+}

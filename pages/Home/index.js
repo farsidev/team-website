@@ -44,8 +44,8 @@ const Home = () => {
                </div>
                <aside className={`${css.rightSide}`}>
                   <Detail />
-                  <div className={css.contactIcon} onClick={handleModal}>
-                     <i className={css.isAnimating} />
+                  <div className={css.contactIcon}>
+                     <i className={css.isAnimating} onClick={handleModal} />
                   </div>
                </aside>
             </DetailProjectProvider>
