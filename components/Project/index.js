@@ -22,8 +22,8 @@ const Project = () => {
             description:
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
             url_text: 'expotik.com',
-            url_address: 'https://www.apple.com',
-            cover: '/static/image/wallpaper/wallpaper_one.jpg',
+            url_address: 'https://www.expotik.com',
+            cover: '/static/image/wallpaper/expo.png',
             devices: [
                {
                   img: '/static/image/icon/android.svg',
@@ -31,17 +31,17 @@ const Project = () => {
                },
                {
                   img: '/static/image/icon/laptop.svg',
-                  title: 'android application',
+                  title: 'website',
                },
             ],
             technologies: [
                {
                   img: '/static/image/icon/react.svg',
-                  title: 'android application',
+                  title: 'react js',
                },
                {
                   img: '/static/image/icon/nodejs.svg',
-                  title: 'android application',
+                  title: 'node js',
                },
                {
                   img: '/static/image/icon/antd.svg',
@@ -51,19 +51,19 @@ const Project = () => {
             developers: [
                {
                   img: '/static/image/guys/sdg.jpg',
-                  title: 'android application',
+                  title: 'mohammadreza sadeghi',
                },
                {
                   img: '/static/image/guys/sina.png',
-                  title: 'android application',
+                  title: 'sina zeini',
                },
                {
                   img: '/static/image/guys/ali.jpg',
-                  title: 'android application',
+                  title: 'ali sameni',
                },
                {
                   img: '/static/image/guys/farshid.jpg',
-                  title: 'android application',
+                  title: 'farshid keymanesh',
                },
             ],
          },
@@ -87,31 +87,31 @@ const Project = () => {
                },
                {
                   img: '/static/image/icon/laptop.svg',
-                  title: 'android application',
+                  title: 'website',
                },
             ],
             technologies: [
                {
                   img: '/static/image/icon/react.svg',
-                  title: 'android application',
-               }
+                  title: 'react js',
+               },
             ],
             developers: [
                {
                   img: '/static/image/guys/sdg.jpg',
-                  title: 'android application',
+                  title: 'mohammadreza sadeghi',
                },
                {
                   img: '/static/image/guys/sina.png',
-                  title: 'android application',
+                  title: 'sina zeini',
                },
                {
                   img: '/static/image/guys/ali.jpg',
-                  title: 'android application',
+                  title: 'ali sameni',
                },
                {
                   img: '/static/image/guys/farshid.jpg',
-                  title: 'android application',
+                  title: 'farshid keymanesh',
                },
             ],
          },
@@ -126,52 +126,44 @@ const Project = () => {
             description:
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
             url_text: 'besparo.com',
-            url_address: 'https://www.apple.com',
-            cover: '/static/image/wallpaper/wallpaper_three.jpg',
+            url_address: 'https://www.besparo.com',
+            cover: '/static/image/wallpaper/besparo.png',
             devices: [
                {
-                  img: '/static/image/icon/android.svg',
-                  title: 'android application',
-               },
-               {
-                  img: '/static/image/icon/apple.svg',
-                  title: 'android application',
-               },
-               {
                   img: '/static/image/icon/laptop.svg',
-                  title: 'android application',
+                  title: 'website',
                },
             ],
             technologies: [
                {
                   img: '/static/image/icon/react.svg',
-                  title: 'android application',
+                  title: 'react js',
                },
                {
                   img: '/static/image/icon/nodejs.svg',
-                  title: 'android application',
+                  title: 'node js',
                },
                {
                   img: '/static/image/icon/antd.svg',
-                  title: 'android application',
+                  title: 'ant design',
                },
             ],
             developers: [
                {
                   img: '/static/image/guys/sdg.jpg',
-                  title: 'android application',
+                  title: 'mohammadreza sadeghi',
                },
                {
                   img: '/static/image/guys/sina.png',
-                  title: 'android application',
+                  title: 'sina zeini',
                },
                {
                   img: '/static/image/guys/ali.jpg',
-                  title: 'android application',
+                  title: 'ali sameni',
                },
                {
                   img: '/static/image/guys/farshid.jpg',
-                  title: 'android application',
+                  title: 'farshid keymanesh',
                },
             ],
          },
@@ -180,32 +172,32 @@ const Project = () => {
          icon: 'a.',
          title: 'ahali',
          detail: {
-            logo: '/static/shark.svg',
+            logo: '/static/ahali.svg',
             title: 'ahali',
             is_active: 1,
             description:
                'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
             url_text: 'ahali.com',
-            url_address: 'https://www.apple.com',
-            cover: '/static/image/wallpaper/wallpaper_four.jpg',
+            url_address: 'https://www.ahali.com',
+            cover: '/static/image/wallpaper/ahali.jpeg',
             devices: [],
             technologies: [],
             developers: [
                {
                   img: '/static/image/guys/sdg.jpg',
-                  title: 'android application',
+                  title: 'mohammadreza sadeghi',
                },
                {
                   img: '/static/image/guys/sina.png',
-                  title: 'android application',
+                  title: 'sina zeini',
                },
                {
                   img: '/static/image/guys/ali.jpg',
-                  title: 'android application',
+                  title: 'ali sameni',
                },
                {
                   img: '/static/image/guys/farshid.jpg',
-                  title: 'android application',
+                  title: 'farshid keymanesh',
                },
             ],
          },
@@ -320,7 +312,7 @@ const Project = () => {
       <div className={`${grid.row} ${grid.flexWrap} ${css.wrapper}`}>
          <div className={css.leftSide}>
             <h4 className={css.mainTitle}>
-               projects <span className={general.count}>(5)</span>
+               projects <span className={general.count}>(27)</span>
             </h4>
             <ul className={css.step}>
                {mock_project.map((eachItem, index) => {
@@ -337,14 +329,14 @@ const Project = () => {
                      </li>
                   );
                })}
-               {/* <li className={css.item}>
+               <li className={css.item}>
                   <a>
                      <div className={css.projectBox}>
-                        <h3 className={css.icon}>8+</h3>
+                        <h3 className={css.icon}>22+</h3>
                      </div>
                      <h4 className={css.title}>more</h4>
                   </a>
-               </li> */}
+               </li>
             </ul>
          </div>
          <div className={css.rightSide}>
