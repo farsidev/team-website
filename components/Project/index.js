@@ -4,7 +4,14 @@ import grid from '../../asset/style/grid.scss';
 import css from './style.scss';
 
 // const rootDir = require('../../util/path');
-
+const animateColor = () => {
+   setInterval(() => {
+      index++;
+      index <= lengthHiddenProject
+         ? setCountProject(index)
+         : clearInterval(refInetervalID.current);
+   }, 100);
+};
 //
 import {useDetailProjectDispatch} from '../../hooks/useDetailProjectDipatch';
 
@@ -14,12 +21,17 @@ const Project = () => {
    const [countProject, setCountProject] = React.useState(0);
    const [showMore, setShowMore] = React.useState(false);
    const refContainer = React.useRef(null);
+   const refShowMore = React.useRef(null);
+   const refInetervalID = React.useRef(null);
+   // let inetervalID;
+
    // const scrollToRef = (ref) => window.scrollTo(0, refContainer.current.offsetTop)
 
    let mock_project = [
       {
          icon: 'e.',
          title: 'exhibition',
+         bg: 'linear-gradient(  45deg,#2b2d42, #37114d )',
          detail: {
             logo: '/static/exhibition.png',
             title: 'iran international exhibition',
@@ -76,6 +88,7 @@ const Project = () => {
       {
          icon: 'm.',
          title: 'moneyz',
+         bg: 'linear-gradient(45deg, #7EA654, #2F6651)',
          detail: {
             logo: '/static/moneyz.svg',
             title: 'moneyz',
@@ -124,6 +137,7 @@ const Project = () => {
       {
          icon: 'b.',
          title: 'besparo',
+         bg: 'linear-gradient(45deg, #232526, #414345)',
          detail: {
             logo: '/static/besparo.png',
             title: 'besparo',
@@ -176,6 +190,8 @@ const Project = () => {
       {
          icon: 'a.',
          title: 'ahali',
+         bg:
+            'linear-gradient( 89deg,  rgba(21,74,189,1) 0.1%, rgba(26,138,211,1) 51.5%, rgba(72,177,234,1) 100.2% )',
          detail: {
             logo: '/static/ahali.svg',
             title: 'ahali',
@@ -232,6 +248,7 @@ const Project = () => {
       {
          icon: 's.',
          title: 'social media',
+         bg: 'linear-gradient(45deg, #4a00e0, #8e2de2)',
          detail: {
             logo: '/static/social.png',
             title: 'social media',
@@ -292,6 +309,7 @@ const Project = () => {
       {
          icon: 'm.',
          title: 'mahan',
+         bg: 'linear-gradient(45deg, #134E5E, #71B280)',
          detail: {
             logo: '/static/mahan.png',
             title: 'bimeh mahan',
@@ -332,6 +350,7 @@ const Project = () => {
       {
          icon: 't.',
          title: 'tiktrip',
+         bg: 'linear-gradient(45deg, #fc4a1a, #f7b733)',
          detail: {
             logo: '/static/tiktrip.svg',
             title: 'tiktrip',
@@ -380,6 +399,7 @@ const Project = () => {
       {
          icon: 'm.',
          title: 'markiz center',
+         bg: 'linear-gradient(45deg, #C49950, #4A9E8D)',
          detail: {
             logo: '/static/markiz.png',
             title: 'markiz center',
@@ -424,6 +444,7 @@ const Project = () => {
       {
          icon: 't.',
          title: 'tak setareh',
+         bg: 'linear-gradient(45deg, #0F2027, #2C5364)',
          detail: {
             logo: '/static/setareh.jpg',
             title: 'tak setareh golpaygan',
@@ -468,6 +489,7 @@ const Project = () => {
       {
          icon: 'p.',
          title: 'partonab',
+         bg: 'linear-gradient(45deg, #1e3c72, #2a5298)',
          detail: {
             logo: '/static/partonab.png',
             title: 'partonab electronic',
@@ -512,6 +534,7 @@ const Project = () => {
       {
          icon: 'a.',
          title: 'acharcharkh',
+         bg: 'linear-gradient(45deg, #457fca, #5691c8)',
          detail: {
             logo: '/static/achar.png',
             title: 'acharcharkh',
@@ -556,6 +579,7 @@ const Project = () => {
       {
          icon: 'k.',
          title: 'katakala',
+         bg: 'linear-gradient(45deg, #76b852, #8DC26F)',
          detail: {
             logo: '/static/katakala.jpg',
             title: 'katakala online shopping',
@@ -600,6 +624,7 @@ const Project = () => {
       {
          icon: 'r.',
          title: 'aftab',
+         bg: 'linear-gradient(45deg, #B79891, #94716B)',
          detail: {
             logo: '/static/aftab.png',
             title: 'resaneh aftab',
@@ -644,6 +669,7 @@ const Project = () => {
       {
          icon: 'c.',
          title: 'conf paper',
+         bg: 'linear-gradient(45deg, #283048, #859398)',
          detail: {
             logo: '/static/conf.jpg',
             title: 'conf paper',
@@ -688,6 +714,7 @@ const Project = () => {
       {
          icon: 'a.',
          title: 'aras book',
+         bg: 'linear-gradient(45deg, #ff9966, #ff5e62)',
          detail: {
             logo: '/static/aras.png',
             title: 'aras book',
@@ -732,6 +759,7 @@ const Project = () => {
       {
          icon: 'm.',
          title: 'magazine',
+         bg: 'linear-gradient(45deg, #1D2B64, #F8CDDA)',
          detail: {
             logo: '/static/car.svg',
             title: 'car magazine',
@@ -776,6 +804,7 @@ const Project = () => {
       {
          icon: 'd.',
          title: '3dinga',
+         bg: 'linear-gradient(45deg, #59C173, #a17fe0, #5D26C1)',
          detail: {
             logo: '/static/dinga.svg',
             title: '3dinga',
@@ -824,6 +853,7 @@ const Project = () => {
       {
          icon: 'j.',
          title: 'jaabook',
+         bg: 'linear-gradient(45deg, #153B43, #DC9E2D)',
          detail: {
             logo: '/static/jaabook.svg',
             title: 'jaabook',
@@ -868,6 +898,7 @@ const Project = () => {
       {
          icon: 'a.',
          title: 'amaday',
+         bg: 'linear-gradient(45deg, #83657F, #AACF74)',
          detail: {
             logo: '/static/amaday.jpg',
             title: 'amaday',
@@ -912,6 +943,7 @@ const Project = () => {
       {
          icon: 't.',
          title: 'tamsofa',
+         bg: 'linear-gradient(45deg, #1C1636, #cbb4d4)',
          detail: {
             logo: '/static/tamsofa.svg',
             title: 'tamsofa',
@@ -956,6 +988,7 @@ const Project = () => {
       {
          icon: 'd.',
          title: 'dokme',
+         bg: 'linear-gradient(45deg, #bc4e9c, #f80759)',
          detail: {
             logo: '/static/dokme.png',
             title: 'dokme',
@@ -1000,6 +1033,7 @@ const Project = () => {
       {
          icon: 'k.',
          title: 'kiket',
+         bg: 'linear-gradient(45deg, #B4502D, #ED8F03)',
          detail: {
             logo: '/static/kiket.png',
             title: 'kiket',
@@ -1044,6 +1078,7 @@ const Project = () => {
       {
          icon: 'k.',
          title: 'kamand',
+         bg: 'linear-gradient(45deg, #E0B74D, #1D0C02)',
          detail: {
             logo: '/static/kamand.png',
             title: 'kamand salon',
@@ -1087,12 +1122,22 @@ const Project = () => {
       },
    ];
    React.useEffect(() => {
-      setCountProject(mock_project.length);
-   }, [mock_project]);
+      let lengthVisibleProject = 5;
+      let lengthHiddenProject = mock_project.length - lengthVisibleProject;
+      let index = 0;
+      refInetervalID.current = setInterval(() => {
+         index++;
+         index <= lengthHiddenProject
+            ? setCountProject(index)
+            : clearInterval(refInetervalID.current);
+      }, 100);
+   }, []);
+
    let mock_progress = [
       {
          logo: '/static/social.png',
          title: 'social media',
+         bg: 'linear-gradient(45deg, #4a00e0, #8e2de2)',
          description:
             'To use more sophisticated CSS-in-JS solutions, you typically have to implement\n' +
             '                                        style',
@@ -1146,29 +1191,36 @@ const Project = () => {
          },
       },
    ];
-   const handleClick = (detail, i) => {
+   const handleClick = (detail, bg, i) => {
       // console.log(detail);
+      document.body.style.background = bg;
       dispatchDetail(detail);
       setActiveClass(i);
    };
    const handleShowMore = () => {
       setShowMore(true);
       refContainer.current.scrollIntoView({block: 'end', behavior: 'smooth'});
+      refShowMore.current.style.display = 'none';
+      setCountProject(mock_project.length);
       // refContainer.current.scrollTo(refContainer.current.clientHeight);
    };
    return (
       <div className={`${grid.row} ${grid.flexWrap} ${css.wrapper}`}>
          <div className={css.leftSide}>
             <h4 className={css.mainTitle}>
-               projects <span className={general.count}>({countProject})</span>
+               projects{' '}
+               <span className={general.count}>({mock_project.length})</span>
             </h4>
             <ul className={`${css.step} ${showMore ? css.hasMore : ''}`}>
                {mock_project.map((eachItem, index) => {
                   return eachItem.detail === 'hasMore' ? (
-                     <li className={`${css.item} ${css.more}`} key={index}>
+                     <li
+                        className={`${css.item} ${css.more}`}
+                        key={index}
+                        ref={refShowMore}>
                         <a onClick={handleShowMore}>
                            <div className={css.projectBox}>
-                              <h3 className={css.icon}>{countProject - 5}+</h3>
+                              <h3 className={css.icon}>{countProject}+</h3>
                            </div>
                            <h4 className={css.title}>{eachItem.title}</h4>
                         </a>
@@ -1176,7 +1228,9 @@ const Project = () => {
                   ) : (
                      <li className={css.item} key={index}>
                         <a
-                           onClick={() => handleClick(eachItem.detail, index)}
+                           onClick={() =>
+                              handleClick(eachItem.detail, eachItem.bg, index)
+                           }
                            className={activeClass === index ? css.active : ''}>
                            <div className={css.projectBox}>
                               <h3 className={css.icon}>{eachItem.icon}</h3>
@@ -1186,7 +1240,7 @@ const Project = () => {
                      </li>
                   );
                })}
-               <span ref={refContainer} />
+               <li ref={refContainer} />
             </ul>
          </div>
          <div className={css.rightSide}>
@@ -1197,7 +1251,10 @@ const Project = () => {
                {mock_progress.map((eachItem, index) => {
                   return (
                      <li key={index}>
-                        <a onClick={() => handleClick(eachItem.detail)}>
+                        <a
+                           onClick={() =>
+                              handleClick(eachItem.detail, eachItem.bg)
+                           }>
                            <div className={css.progressBox}>
                               <div
                                  className={`${grid.row} ${grid.alignItemsCenter}`}>
