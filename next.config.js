@@ -1,12 +1,10 @@
 const withSass = require('@zeit/next-sass');
-const prod = process.env.NODE_ENV === 'production';
 
 module.exports = withSass({
-   distDir: 'build',
    cssModules: true,
    cssLoaderOptions: {
       importLoaders: 1,
-      localIdentName: prod ? '[hash:base64:5]' : '[local]',
+      localIdentName: '[local]___[hash:base64:5]',
    },
    webpack: function(config) {
       config.module.rules.push({
