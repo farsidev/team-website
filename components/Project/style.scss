@@ -1,15 +1,13 @@
 .wrapper {
    margin: 30px 0 15px 0;
-
    .leftSide {
-      width: 55%;
+      width: 50%;
       position: relative;
-
       &:after {
          position: absolute;
          content: '';
          height: 40px;
-         right: 59px;
+         right: 15px;
          width: 1px;
          background: #ffffff17;
          top: 50%;
@@ -22,8 +20,14 @@
          align-items: center;
          flex-wrap: wrap;
 
+         overflow: hidden;
+         height: 286px;
+         max-height: 286px;
+         &.hasMore {
+            overflow-y: scroll;
+         }
          .item {
-            width: calc(29% - 20px);
+            width: calc(32% - 20px);
             margin: 0 12px 12px 0;
             text-align: center;
             cursor: pointer;
@@ -35,21 +39,21 @@
                }
             }
 
-            // &:last-child {
-            //   a {
-            //     &:before {
-            //       display: none;
-            //     }
+            &.more {
+               a {
+                  &:before {
+                     display: none;
+                  }
 
-            //     .projectBox {
-            //       background: #ffffff1f;
-            //     }
+                  .projectBox {
+                     background: #ffffff1f;
+                  }
 
-            //     .title {
-            //       color: transparent;
-            //     }
-            //   }
-            // }
+                  .title {
+                     color: transparent;
+                  }
+               }
+            }
 
             a {
                transition: all 0.2s ease-in;
@@ -59,7 +63,7 @@
                &.active {
                   .projectBox {
                      filter: grayscale(1);
-                     border-color: #fff;
+                    
                   }
                }
 
@@ -80,10 +84,10 @@
                .projectBox {
                   transition: all 0.2s ease-in;
                   position: relative;
-                  padding: 30px 0;
+                  padding: 33px 0;
                   border-radius: 25px;
                   background: linear-gradient(45deg, #ff416c, #ff4b2b);
-                  border: 3px solid transparent;
+                  
 
                   .icon {
                      font-size: 2rem;
@@ -115,7 +119,7 @@
 
    .rightSide {
       width: 40%;
-
+      margin-left: 20px;
       .progressBox {
          background: #ffffff1f;
          border-radius: 25px;
