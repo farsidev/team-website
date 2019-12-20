@@ -11,8 +11,8 @@ const initProject = {
    description:
       'It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your.',
    url_text: 'expotik.com',
-   url_address: 'https://www.apple.com',
-   cover: '/static/image/wallpaper/wallpaper_one.jpg',
+   url_address: 'https://www.expotik.com',
+   cover: '/static/image/wallpaper/expo.png',
    devices: [
       {img: '/static/image/icon/android.svg', title: 'android application'},
       {img: '/static/image/icon/laptop.svg', title: 'android application'},
