@@ -2,6 +2,7 @@ const withSass = require('@zeit/next-sass');
 const prod = process.env.NODE_ENV === 'production';
 
 module.exports = withSass({
+   distDir: 'build',
    cssModules: true,
    cssLoaderOptions: {
       importLoaders: 1,
